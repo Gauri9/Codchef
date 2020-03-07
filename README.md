@@ -1,2 +1,2 @@
-# Codchef
+# Codechef
 Codechef Solutions
