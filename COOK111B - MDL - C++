@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int T,num,n,i;
+	int vec[100];int dup[100];
+	cin>>T;
+	while(T>0){
+	//taking the input
+	cin>>n;
+	
+	for(i=0;i<n;i++){  
+	    cin>>num;
+	    vec[i]=num;
+	}
+	for(i=0;i<n;i++){  
+        dup[i]=vec[i];
+	}
+	
+	//sort
+	sort(vec,vec+n);
+	for(int i=0;i<n;i++){
+	    if(vec[0]==dup[i]){
+	        cout<<vec[0]<<" "<<vec[n-1]<<endl;
+	        break;
+	    }
+	    if(vec[n-1]==dup[i]){
+	        cout<<vec[n-1]<<" "<<vec[0]<<endl;
+	        break;
+	    }
+	}
+	T--;
+	}
+	return 0;
+}
