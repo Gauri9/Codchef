@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#include <iterator> 
+#include <map> 
+
+int main(){
+	// your code goes here
+ 
+	int sum=0,no_of_cases=0,problem_solved=0,key=0,value=0;
+	cin>>no_of_cases;
+	while(no_of_cases!=0){
+	    	map<int,int> map   = {{1,0},{2,0},{3,0},{4,0},{5,0},{6,0},{7,0},{8,0},{9,0}};
+	    cin>>problem_solved;
+	    while(problem_solved!=0){
+	        cin>>key>>value;
+	        if(value>map[key]&&key<=9)
+	            map[key]=value;
+	        problem_solved--;
+	    }
+	    sum=0;
+	    for(int i=1;i<9;i++){
+	        sum = sum + map[i]; 
+	    }
+	    cout<<sum<<endl;
+	    no_of_cases--;
+	}
+	return 0;
+}
